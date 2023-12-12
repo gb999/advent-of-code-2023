@@ -2,3 +2,4 @@
 I learned not to enter git commands which I don't understand...
 
 My solution to this problem was using some hash tables.
+In part 2, the least common multiple was used.
