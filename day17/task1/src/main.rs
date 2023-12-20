@@ -47,7 +47,7 @@ impl Ord for Move {
 fn find_lowest_heatloss(matrix: &Vec<Vec<u32>>) -> u32 {
     // min heap
     let mut heap: BinaryHeap<Reverse<Move>> = BinaryHeap::new();
-    let mut seen:HashSet<(usize,usize,i32,i32,usize)> = HashSet::new();
+    let mut seen: HashSet<(usize,usize,i32,i32,usize)> = HashSet::new();
 
     
     heap.push(Reverse(Move{x:0,y:0,dirx:1,diry:0,n_dir:0,heatloss:0}));
@@ -75,7 +75,6 @@ fn find_lowest_heatloss(matrix: &Vec<Vec<u32>>) -> u32 {
                     n_dir: n_dir +1,
                     heatloss: heatloss + matrix[newx as usize][newy as usize] as usize
                 }));
-        
             }
         } 
 
